@@ -1,11 +1,15 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         Day[] days = Day.values();
+        String dayName=new Scanner(System.in).nextLine();
         for (Day day : days) {
-            System.out.println(day.name());
-            System.out.println(day);
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+          if (day.equals(Day.valueOf(dayName.toUpperCase(Locale.ROOT)))){
+              System.out.println(day.toString());
+          }
         }
     }
 }
